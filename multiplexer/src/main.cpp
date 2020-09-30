@@ -4,22 +4,10 @@
 #define s1 26
 #define s2 28
 #define s3 30
+#define sig 2
 
-void setup() {
-  pinMode(22, OUTPUT);
-  pinMode(24, OUTPUT);
-  pinMode(26, OUTPUT);
-  pinMode(28, OUTPUT);
-  pinMode(30, OUTPUT);
- 
-}
-
-void loop() {
-  // put your main code here, to run repeatedly:
-}
-
-short select(int select) {
-  switch (select) {
+void select(int u) {
+  switch (u) {
     case 0:
       digitalWrite(s0, LOW);
       digitalWrite(s1, LOW);
@@ -27,14 +15,14 @@ short select(int select) {
       digitalWrite(s3, LOW);
       break;
      case 1:
-      digitalWrite(s0, LOW);
+      digitalWrite(s0, HIGH);
       digitalWrite(s1, LOW);
       digitalWrite(s2, LOW);
       digitalWrite(s3, LOW);
       break;
       case 2:
       digitalWrite(s0, LOW);
-      digitalWrite(s1, LOW);
+      digitalWrite(s1, HIGH);
       digitalWrite(s2, LOW);
       digitalWrite(s3, LOW);
       break;
@@ -119,3 +107,24 @@ short select(int select) {
 
   }
 }
+
+void setup() {
+  pinMode(22, OUTPUT);
+  pinMode(24, OUTPUT);
+  pinMode(26, OUTPUT);
+  pinMode(28, OUTPUT);
+  pinMode(30, OUTPUT);
+ 
+}
+
+
+void loop() {
+  digitalWrite(enable,HIGH);
+select(0);
+analogWrite(sig,255);
+select(1);
+analogWrite(sig,255);
+select(2);
+analogWrite(sig,255);
+ }
+
