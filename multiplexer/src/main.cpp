@@ -119,12 +119,29 @@ void setup() {
 
 
 void loop() {
-  digitalWrite(enable,HIGH);
-select(0);
+  int r=random(0,255);
+  int g=random(0,255);
+  int b=random(0,255);
+  
+digitalWrite(enable,LOW);
+digitalWrite(s0, LOW);
+digitalWrite(s1, LOW);
+digitalWrite(s2, LOW);
+digitalWrite(s3, LOW);
 analogWrite(sig,255);
-select(1);
+digitalWrite(s0, 1);
+digitalWrite(s1, LOW);
+digitalWrite(s2, LOW);
+digitalWrite(s3, LOW);
 analogWrite(sig,255);
-select(2);
-analogWrite(sig,255);
+digitalWrite(s0, LOW);
+digitalWrite(s1, HIGH);
+digitalWrite(s2, LOW);
+digitalWrite(s3, LOW);
+analogWrite(sig,30);
+  
+  
+
+delay(100);
  }
 
