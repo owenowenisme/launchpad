@@ -4,136 +4,29 @@
 #define s1 26
 #define s2 28
 #define s3 30
-#define sig 2
+#define sig 3
 
-void select(int u) {
-  switch (u) {
-    case 0:
-      digitalWrite(s0, LOW);
-      digitalWrite(s1, LOW);
-      digitalWrite(s2, LOW);
-      digitalWrite(s3, LOW);
-      break;
-     case 1:
-      digitalWrite(s0, HIGH);
-      digitalWrite(s1, LOW);
-      digitalWrite(s2, LOW);
-      digitalWrite(s3, LOW);
-      break;
-      case 2:
-      digitalWrite(s0, LOW);
-      digitalWrite(s1, HIGH);
-      digitalWrite(s2, LOW);
-      digitalWrite(s3, LOW);
-      break;
-      case 3:
-      digitalWrite(s0, LOW);
-      digitalWrite(s1, LOW);
-      digitalWrite(s2, LOW);
-      digitalWrite(s3, LOW);
-      break;
-      case 4:
-      digitalWrite(s0, LOW);
-      digitalWrite(s1, LOW);
-      digitalWrite(s2, LOW);
-      digitalWrite(s3, LOW);
-      break;
-      case 5:
-      digitalWrite(s0, LOW);
-      digitalWrite(s1, LOW);
-      digitalWrite(s2, LOW);
-      digitalWrite(s3, LOW);
-      break;
-      case 6:
-      digitalWrite(s0, LOW);
-      digitalWrite(s1, LOW);
-      digitalWrite(s2, LOW);
-      digitalWrite(s3, LOW);
-      break;
-      case 7:
-      digitalWrite(s0, LOW);
-      digitalWrite(s1, LOW);
-      digitalWrite(s2, LOW);
-      digitalWrite(s3, LOW);
-      break;
-      case 8:
-      digitalWrite(s0, LOW);
-      digitalWrite(s1, LOW);
-      digitalWrite(s2, LOW);
-      digitalWrite(s3, LOW);
-      break;
-      case 9:
-      digitalWrite(s0, LOW);
-      digitalWrite(s1, LOW);
-      digitalWrite(s2, LOW);
-      digitalWrite(s3, LOW);
-      break;
-      case 10:
-      digitalWrite(s0, LOW);
-      digitalWrite(s1, LOW);
-      digitalWrite(s2, LOW);
-      digitalWrite(s3, LOW);
-      break;
-      case 11:
-      digitalWrite(s0, LOW);
-      digitalWrite(s1, LOW);
-      digitalWrite(s2, LOW);
-      digitalWrite(s3, LOW);
-      break;
-      case 12:
-      digitalWrite(s0, LOW);
-      digitalWrite(s1, LOW);
-      digitalWrite(s2, LOW);
-      digitalWrite(s3, LOW);
-      break;
-      case 13:
-      digitalWrite(s0, LOW);
-      digitalWrite(s1, LOW);
-      digitalWrite(s2, LOW);
-      digitalWrite(s3, LOW);
-      break;
-      case 14:
-      digitalWrite(s0, LOW);
-      digitalWrite(s1, LOW);
-      digitalWrite(s2, LOW);
-      digitalWrite(s3, LOW);
-      break;
-      case 15:
-      digitalWrite(s0, LOW);
-      digitalWrite(s1, LOW);
-      digitalWrite(s2, LOW);
-      digitalWrite(s3, LOW);
-      break;
 
-  }
-}
-
-void setup() {
-  pinMode(22, OUTPUT);
-  pinMode(24, OUTPUT);
-  pinMode(26, OUTPUT);
-  pinMode(28, OUTPUT);
-  pinMode(30, OUTPUT);
- 
-}
 
 
 void loop() {
   int r=random(0,255);
   int g=random(0,255);
   int b=random(0,255);
-  
+ // analogWrite(5,100);analogWrite(7,100);analogWrite(6,100);w
 digitalWrite(enable,LOW);
 digitalWrite(s0, LOW);
 digitalWrite(s1, LOW);
 digitalWrite(s2, LOW);
 digitalWrite(s3, LOW);
-analogWrite(sig,255);
-digitalWrite(s0, 1);
+analogWrite(sig,30);
+delay(1000);
+digitalWrite(s0, HIGH);
 digitalWrite(s1, LOW);
 digitalWrite(s2, LOW);
 digitalWrite(s3, LOW);
-analogWrite(sig,255);
+analogWrite(sig,30);
+delay(1000);
 digitalWrite(s0, LOW);
 digitalWrite(s1, HIGH);
 digitalWrite(s2, LOW);
@@ -142,6 +35,6 @@ analogWrite(sig,30);
   
   
 
-delay(100);
+delay(1000);
  }
 
