@@ -7,34 +7,45 @@
 #define sig 3
 
 
+void setup() {
+  pinMode(22, OUTPUT);
+  pinMode(24, OUTPUT);
+  pinMode(26, OUTPUT);
+  pinMode(28, OUTPUT);
+  pinMode(30, OUTPUT);
+ 
+}
 
 
 void loop() {
-  int r=random(0,255);
-  int g=random(0,255);
-  int b=random(0,255);
- // analogWrite(5,100);analogWrite(7,100);analogWrite(6,100);w
+
+
 digitalWrite(enable,LOW);
+for(int i=0;i<10000;i++){
 digitalWrite(s0, LOW);
 digitalWrite(s1, LOW);
 digitalWrite(s2, LOW);
 digitalWrite(s3, LOW);
-analogWrite(sig,30);
-delay(1000);
+analogWrite(sig,255);
+//delayMicroseconds(1);
 digitalWrite(s0, HIGH);
 digitalWrite(s1, LOW);
 digitalWrite(s2, LOW);
 digitalWrite(s3, LOW);
-analogWrite(sig,30);
-delay(1000);
+analogWrite(sig,255);
+//delayMicroseconds(1);
+
 digitalWrite(s0, LOW);
 digitalWrite(s1, HIGH);
 digitalWrite(s2, LOW);
 digitalWrite(s3, LOW);
-analogWrite(sig,30);
-  
-  
+analogWrite(sig,10);
+//delayMicroseconds(1);
 
-delay(1000);
+
+
+
+//delay(1000);
+}
+
  }
-
